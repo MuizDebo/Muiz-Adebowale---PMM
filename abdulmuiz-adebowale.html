@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abdulmuiz Adebowale — Product Marketing Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e0a;
+    --bg-2: #0f1410;
+    --bg-3: #131a13;
+    --ink: #e8f0e6;
+    --ink-dim: #8a948a;
+    --ink-faint: #4a544a;
+    --accent: #c6ff3d;
+    --accent-dim: #7d9e26;
+    --rule: #1d251c;
+    --rule-bright: #2e3a2c;
+    --warn: #ff9248;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(198, 255, 61, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(198, 255, 61, 0.03) 0%, transparent 40%);
+  }
+
+  /* Subtle grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 2px,
+        rgba(255,255,255,0.008) 2px,
+        rgba(255,255,255,0.008) 3px
+      );
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .topbar .live-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+  }
+  .hero .label {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero .label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .hero h1 .accent {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 400;
+  }
+  .hero .role {
+    font-size: 13px;
+    color: var(--ink-dim);
+    letter-spacing: 0.05em;
+    max-width: 520px;
+  }
+  .hero-meta {
+    text-align: right;
+    font-size: 11px;
+    color: var(--ink-faint);
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .hero-meta strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ─── NAV / SECTION INDEX ─── */
+  .index {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .index a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+    padding-left: 22px;
+  }
+  .index a::before {
+    content: attr(data-num);
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: 500;
+  }
+  .index a:hover { color: var(--ink); }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .section-head {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+    align-items: start;
+  }
+  .section-num {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    padding-top: 8px;
+  }
+  .section-title h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .section-title .subtitle {
+    font-size: 13px;
+    color: var(--ink-dim);
+    max-width: 580px;
+  }
+
+  /* ─── PROLOGUE ─── */
+  .prologue {
+    padding-left: 104px;
+    max-width: 760px;
+  }
+  .prologue p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .prologue p:last-child { margin-bottom: 0; }
+  .prologue .pull {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  /* ─── FUNNEL ─── */
+  .funnel-wrap {
+    padding-left: 104px;
+  }
+  .funnel-intro {
+    font-size: 14px;
+    color: var(--ink-dim);
+    max-width: 720px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+  .funnel-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .stage {
+    display: grid;
+    grid-template-columns: 60px 1fr 2fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.3s;
+    position: relative;
+  }
+  .stage:hover {
+    background: linear-gradient(90deg, rgba(198,255,61,0.04), transparent 60%);
+  }
+  .stage:hover .stage-bar {
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(198,255,61,0.4);
+  }
+  .stage-num {
+    color: var(--ink-faint);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding-top: 4px;
+  }
+  .stage-name {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stage-name .label {
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .stage-name h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .stage-name .stage-bar {
+    width: 32px;
+    height: 2px;
+    background: var(--rule-bright);
+    margin-top: 4px;
+    transition: all 0.3s;
+  }
+  .stage-detail p {
+    color: var(--ink-dim);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .stage-detail .tactics {
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .stage-detail .tactics span {
+    color: var(--ink-dim);
+    margin-right: 16px;
+  }
+
+  /* ─── CASE STUDY ─── */
+  .case-wrap {
+    padding-left: 104px;
+  }
+  .case-study {
+    border: 1px solid var(--rule);
+    margin-bottom: 32px;
+    background: var(--bg-2);
+    transition: border-color 0.3s;
+  }
+  .case-study:hover { border-color: var(--rule-bright); }
+  .case-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .case-header .name {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .case-header .name .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-left: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--accent-dim);
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+  .case-header .meta {
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .case-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--rule);
+  }
+  .case-block {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+  }
+  .case-block:last-child { border-right: none; }
+  .case-block .label {
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .case-block .label::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .case-block p {
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+  }
+  .case-results {
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .metric .num {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .metric .num.qual {
+    font-size: 17px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .metric .desc {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 1.5;
+  }
+
+  /* ─── ARTIFACT (embedded diagram) ─── */
+  .artifact {
+    border-top: 1px solid var(--rule);
+    background: var(--bg-3);
+  }
+  .artifact-head {
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  .artifact-head .label {
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .artifact-head .label::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+  }
+  .artifact-head .links { display: flex; gap: 18px; }
+  .artifact-head .links a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .artifact-head .links a:hover { color: var(--accent); }
+  .artifact-frame {
+    background: white;
+    height: 480px;
+    overflow: auto;
+    position: relative;
+  }
+  .artifact-frame object {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+  }
+  .artifact-foot {
+    padding: 14px 32px;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--rule);
+    line-height: 1.6;
+  }
+
+  /* ─── INFLIGHT (Project Chronicle callout) ─── */
+  .inflight {
+    border: 1px solid var(--rule);
+    background: var(--bg-2);
+    padding: 32px;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    position: relative;
+  }
+  .inflight::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent), transparent);
+  }
+  .inflight .left .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .inflight .left .tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .inflight .left h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .inflight .left .stage-tag {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .inflight .right p {
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .inflight .right .links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .inflight .right .links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .inflight .right .links a:hover {
+    border-bottom-color: var(--accent);
+  }
+
+  /* ─── BIO ─── */
+  .bio-wrap {
+    padding-left: 104px;
+    max-width: 760px;
+  }
+  .bio-wrap p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  .bio-wrap p:last-child { margin-bottom: 0; }
+  .bio-wrap em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-wrap {
+    padding-left: 104px;
+  }
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testimonial {
+    border: 1px solid var(--rule);
+    padding: 28px;
+    background: var(--bg-2);
+    position: relative;
+    transition: all 0.3s;
+  }
+  .testimonial:hover {
+    border-color: var(--rule-bright);
+    transform: translateY(-2px);
+  }
+  .testimonial.self {
+    border-color: var(--accent-dim);
+    background: linear-gradient(180deg, rgba(198,255,61,0.04), var(--bg-2));
+  }
+  .testimonial .quote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 60px;
+    color: var(--accent);
+    line-height: 0.5;
+    margin-bottom: 16px;
+    display: block;
+    height: 24px;
+  }
+  .testimonial .quote {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .testimonial .attr {
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .testimonial.self .attr { border-top-color: var(--accent-dim); }
+  .testimonial .attr .name {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .testimonial .attr .role {
+    color: var(--ink-faint);
+    margin-top: 4px;
+    font-size: 10px;
+  }
+  .testimonial .attr .self-tag {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ─── SKILLS ─── */
+  .skills-wrap {
+    padding-left: 104px;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .skill-row:nth-child(odd) { padding-right: 32px; }
+  .skill-row:nth-child(even) { padding-left: 32px; border-left: 1px solid var(--rule); }
+  .skill-row .cat {
+    font-size: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-top: 4px;
+  }
+  .skill-row .items {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  .skill-row .items span {
+    display: inline-block;
+    margin-right: 4px;
+    color: var(--ink-dim);
+  }
+  .skill-row .items span::after {
+    content: '·';
+    color: var(--ink-faint);
+    margin-left: 8px;
+  }
+  .skill-row .items span:last-child::after { content: ''; }
+
+  /* ─── CTA ─── */
+  .cta {
+    padding: 100px 0 80px;
+    text-align: center;
+    border-bottom: none;
+  }
+  .cta .label {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .cta h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+  .cta h2 .accent {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 400;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+  }
+  .contact-cell {
+    padding: 28px 32px;
+    text-align: left;
+    border-right: 1px solid var(--rule);
+    transition: background 0.3s;
+  }
+  .contact-cell:nth-child(2) { border-right: none; }
+  .contact-cell:nth-child(3) {
+    border-top: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+  .contact-cell:nth-child(4) {
+    border-top: 1px solid var(--rule);
+  }
+  .contact-cell:hover {
+    background: rgba(198,255,61,0.04);
+  }
+  .contact-cell .label {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+  }
+  .contact-cell a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-all;
+    transition: color 0.2s;
+  }
+  .contact-cell a:hover { color: var(--accent); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 24px 0;
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 860px) {
+    .container { padding: 0 20px; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-meta { text-align: left; }
+    .section-head { grid-template-columns: 1fr; gap: 8px; }
+    .prologue, .funnel-wrap, .case-wrap, .bio-wrap, .testimonials-wrap, .skills-wrap { padding-left: 0; }
+    .stage { grid-template-columns: 1fr; gap: 12px; }
+    .case-body { grid-template-columns: 1fr 1fr; }
+    .case-block:nth-child(2) { border-right: none; }
+    .case-block:nth-child(1), .case-block:nth-child(2) { border-bottom: 1px solid var(--rule); }
+    .case-results { grid-template-columns: 1fr 1fr; }
+    .testimonials { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-row:nth-child(even) { padding-left: 0; border-left: none; }
+    .skill-row:nth-child(odd) { padding-right: 0; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-cell { border-right: none !important; border-bottom: 1px solid var(--rule); }
+    .contact-cell:last-child { border-bottom: none; }
+    .case-header { grid-template-columns: 1fr; }
+    .case-header .meta { text-align: left; }
+    .inflight { grid-template-columns: 1fr; gap: 20px; }
+    .artifact-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .artifact-frame { height: 360px; }
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; color: #111; font-size: 10pt; }
+    body::before { display: none; }
+    .topbar, .index, footer { display: none; }
+    section { padding: 24pt 0; page-break-inside: avoid; border-bottom: 1px solid #ddd; }
+    .hero { padding: 24pt 0; border-bottom: 1px solid #ddd; }
+    .hero h1 { color: #111; font-size: 36pt; }
+    .hero h1 .accent { color: #5a7a18; }
+    .stage:hover, .testimonial:hover, .case-study:hover, .contact-cell:hover { background: none; transform: none; }
+    .accent, .label, .stage-num, .case-block .label, .testimonial .quote-mark, .skill-row .cat, .cta .label, .case-header .name .tag, .metric .num, .inflight .left .tag, .artifact-head .label { color: #5a7a18 !important; }
+    a { color: #111; text-decoration: underline; }
+    .case-study, .testimonial, .contact-grid, .inflight { border-color: #ccc; background: white; break-inside: avoid; }
+    .stage, .skill-row, .case-block { border-color: #ddd; }
+    .artifact { background: white; }
+    .artifact-frame { height: auto; max-height: 600px; }
+    .testimonial.self { background: white; border-color: #5a7a18; }
+  }
+
+  /* Stagger reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: reveal 0.7s ease-out forwards;
+  }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ── TOP BAR ── -->
+  <div class="topbar">
+    <div><span class="live-dot"></span>STATUS: AVAILABLE FOR ROLE</div>
+    <div>v1.1 — IBADAN / REMOTE</div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div class="reveal" style="animation-delay: 0.1s;">
+        <div class="label">Application — Product Marketing Manager</div>
+        <h1>This is not a<br><span class="accent">resume.</span></h1>
+        <p class="role">It's a marketing artifact — built as a product page. Read it for the way I think, the funnels I run, and the work I've actually shipped.</p>
+      </div>
+      <div class="hero-meta reveal" style="animation-delay: 0.3s;">
+        <div><strong>ABDULMUIZ</strong></div>
+        <div><strong>ADEBOWALE</strong></div>
+        <div style="margin-top: 16px;">PMM · GROWTH</div>
+        <div>B2B · B2C · AI</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── INDEX ── -->
+  <nav class="index">
+    <a href="#prologue" data-num="00">Prologue</a>
+    <a href="#funnel" data-num="01">The Funnel</a>
+    <a href="#case-studies" data-num="02">Case Studies</a>
+    <a href="#bio" data-num="03">Bio</a>
+    <a href="#reviews" data-num="04">Reviews</a>
+    <a href="#stack" data-num="05">Stack</a>
+    <a href="#contact" data-num="06">Contact</a>
+  </nav>
+
+  <!-- ── 00 / PROLOGUE ── -->
+  <section id="prologue">
+    <div class="section-head">
+      <div class="section-num">// 00</div>
+      <div class="section-title">
+        <h2>Prologue</h2>
+        <div class="subtitle">Why this document looks the way it does.</div>
+      </div>
+    </div>
+    <div class="prologue">
+      <p>You are about to hire someone to <span class="pull">turn strangers into users, and users into believers.</span> A bullet-point resume tells you where I've worked. It does not tell you how I think.</p>
+      <p>So I built this instead — a top-of-funnel asset for myself. Below: the marketing process I run, three pieces of work that prove it works, and the people who would vouch for me on a Tuesday.</p>
+    </div>
+  </section>
+
+  <!-- ── 01 / FUNNEL ── -->
+  <section id="funnel">
+    <div class="section-head">
+      <div class="section-num">// 01</div>
+      <div class="section-title">
+        <h2>The funnel I run.</h2>
+        <div class="subtitle">A standard pirate-metrics frame (AARRR), adapted for AI consumer products. The signature framework comes after I understand your product — for now, the fundamentals.</div>
+      </div>
+    </div>
+
+    <div class="funnel-wrap">
+      <p class="funnel-intro">Every stage answers one question and is measured by one metric. Tactics change. The questions don't.</p>
+
+      <div class="funnel-stages">
+
+        <div class="stage">
+          <div class="stage-num">01 / 05</div>
+          <div class="stage-name">
+            <div class="label">Acquisition</div>
+            <h3>Can they find us?</h3>
+            <div class="stage-bar"></div>
+          </div>
+          <div class="stage-detail">
+            <p>The job is to put the product where the demand already lives — not to invent demand from a cold start. I map the channels where the target user's intent is highest, then test small before scaling.</p>
+            <div class="tactics"><span>SEO</span><span>Paid social</span><span>Content</span><span>Community seeding</span><span>PLG loops</span></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">02 / 05</div>
+          <div class="stage-name">
+            <div class="label">Activation</div>
+            <h3>Did they see the magic?</h3>
+            <div class="stage-bar"></div>
+          </div>
+          <div class="stage-detail">
+            <p>For an AI consumer product, the "aha" moment is rarely the homepage — it's the first prompt that actually works. I obsess over the gap between sign-up and first value, and I shorten it.</p>
+            <div class="tactics"><span>Onboarding flows</span><span>First-prompt design</span><span>Empty-state UX</span><span>Activation events</span></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">03 / 05</div>
+          <div class="stage-name">
+            <div class="label">Retention</div>
+            <h3>Do they come back?</h3>
+            <div class="stage-bar"></div>
+          </div>
+          <div class="stage-detail">
+            <p>Retention is the only metric that doesn't lie. Lifecycle email, push, in-app nudges — but only when the product earns the right to send them. Habits beat features.</p>
+            <div class="tactics"><span>Lifecycle email</span><span>Cohort analysis</span><span>Habit loops</span><span>Re-engagement</span></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">04 / 05</div>
+          <div class="stage-name">
+            <div class="label">Revenue</div>
+            <h3>Will they pay?</h3>
+            <div class="stage-bar"></div>
+          </div>
+          <div class="stage-detail">
+            <p>Pricing pages are not a content problem — they're a positioning problem. I pressure-test paywalls, plan structure, and the moment of monetization against the value the user has already received.</p>
+            <div class="tactics"><span>Paywall design</span><span>Pricing tests</span><span>Trial-to-paid</span><span>Expansion offers</span></div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">05 / 05</div>
+          <div class="stage-name">
+            <div class="label">Referral</div>
+            <h3>Will they bring friends?</h3>
+            <div class="stage-bar"></div>
+          </div>
+          <div class="stage-detail">
+            <p>The cheapest user is the one your existing user invited. I look for the natural moment of pride — the moment the user wants to show off the output — and I build the share mechanic right there.</p>
+            <div class="tactics"><span>Share artifacts</span><span>Referral incentives</span><span>UGC loops</span><span>Word-of-mouth triggers</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 / CASE STUDIES ── -->
+  <section id="case-studies">
+    <div class="section-head">
+      <div class="section-num">// 02</div>
+      <div class="section-title">
+        <h2>Case studies.</h2>
+        <div class="subtitle">Two shipped. One in flight. Same operating system, different products.</div>
+      </div>
+    </div>
+
+    <div class="case-wrap">
+
+      <!-- CASE 1 — WHATSNEXT (lead with the strongest) -->
+      <article class="case-study">
+        <div class="case-header">
+          <div class="name">WhatsNext<span class="tag">B2C · Marketplace</span></div>
+          <div class="meta">Build &amp; Launch · 2025</div>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <div class="label">Context</div>
+            <p>An event listing and management platform for hyper-local communities in the U.S., starting with Oceanside. Two-sided marketplace: local businesses on one side, residents looking for things to do on the other. Mobile-first audience, weak existing alternatives in the niche.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Problem</div>
+            <p>Empty marketplace, zero brand. Needed both sides of the network at the same time — no businesses means no events to attend; no audience means no reason for businesses to list. A cold-start problem disguised as a launch.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Approach</div>
+            <p>Built the platform end-to-end and the GTM around it: B2B sales materials to close local businesses, an onboarding workflow that got listings live in minutes, a lifecycle email sequence keyed to listing milestones, and an SEO framework targeting local-intent queries. Closed the loop with analytics so each cohort informed the next.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Outcome</div>
+            <p>The two-sided launch worked. Businesses signed up faster than the team could onboard them, and a premium tier (promotions + verification) opened a clear monetization path within the first month.</p>
+          </div>
+        </div>
+        <div class="case-results">
+          <div class="metric">
+            <span class="num">35+</span>
+            <div class="desc">Local businesses signed up · Month 1</div>
+          </div>
+          <div class="metric">
+            <span class="num">20</span>
+            <div class="desc">In pipeline for premium tier</div>
+          </div>
+          <div class="metric">
+            <span class="num">500+</span>
+            <div class="desc">Events listed · 3 months</div>
+          </div>
+          <div class="metric">
+            <span class="num qual">Two-sided<br>marketplace</span>
+            <div class="desc">Built and launched solo</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 2 — NEXT LEVEL AGENCY -->
+      <article class="case-study">
+        <div class="case-header">
+          <div class="name">Next Level Agency<span class="tag">B2B SaaS</span></div>
+          <div class="meta">Lifecycle &amp; Automation · 2025</div>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <div class="label">Context</div>
+            <p>A B2B agency-tech business running on GoHighLevel across multiple sub-accounts. Trial users were leaking, payment failures were silent, and the lifecycle was held together by manual ops.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Problem</div>
+            <p>No systematic way to convert trials, recover failed payments, or reach trial-expiring users at the right moment. Every recovery was a fire drill, every conversion was luck.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Approach</div>
+            <p>Designed and shipped end-to-end automations across two GHL sub-accounts: pipeline triggers, webhook-based contact syncing, product tagging, trial-expiration reminders, extension workflows, and dunning for failed payments — Make.com handling the integration layer.</p>
+          </div>
+          <div class="case-block">
+            <div class="label">Outcome</div>
+            <p>Trial-to-paid became a system, not a wish. Failed payments routed automatically into a recovery sequence before they became churn. The team stopped firefighting and started compounding.</p>
+          </div>
+        </div>
+        <div class="case-results">
+          <div class="metric">
+            <span class="num qual">Manual ops<br>→ system</span>
+            <div class="desc">Lifecycle moved off human ops</div>
+          </div>
+          <div class="metric">
+            <span class="num qual">Silent churn<br>→ recovered</span>
+            <div class="desc">Failed payments now triggered</div>
+          </div>
+          <div class="metric">
+            <span class="num">2</span>
+            <div class="desc">Sub-accounts fully automated</div>
+          </div>
+          <div class="metric">
+            <span class="num">1</span>
+            <div class="desc">Live ops dashboard (Power BI)</div>
+          </div>
+        </div>
+
+        <!-- Embedded artifact: the actual flowchart -->
+        <div class="artifact">
+          <div class="artifact-head">
+            <div class="label">Artifact — System Diagram</div>
+            <div class="links">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiZjM1YTU3ZWMtYjdkMS00MWE3LWExMmUtYTNmZDRmYzhiZGUzIiwidCI6IjA2NGNlNzk0LWUxYjEtNGEzNy1hOWY2LTU5ZTc4MjFhNWIyYiJ9" target="_blank" rel="noopener">↗ Live Power BI dashboard</a>
+              <a href="nla-system-diagram.svg" target="_blank" rel="noopener">↗ Open full diagram</a>
+            </div>
+          </div>
+          <div class="artifact-frame">
+            <object data="nla-system-diagram.svg" type="image/svg+xml" aria-label="Next Level Agency products page automation diagram"></object>
+          </div>
+          <div class="artifact-foot">Scroll inside the frame to inspect. The flow covers: products page → checkout → SaaS purchase webhook → GHL contact sync → trial workflows → expiry reminders → extension or dunning → status tagging.</div>
+        </div>
+      </article>
+
+      <!-- CASE 3 — PROJECT CHRONICLE (in-flight callout) -->
+      <div class="inflight">
+        <div class="left">
+          <div class="tag">In flight — R&amp;D</div>
+          <h3>Project Chronicle</h3>
+          <div class="stage-tag">Pre-launch · waitlist live · 2026</div>
+        </div>
+        <div class="right">
+          <p>A consumer product currently in R&amp;D — landing page live, waitlist collecting signups, distribution motion running on LinkedIn in parallel. The deliberate choice: build the audience before the product, not after. Same funnel logic applied at the pre-launch end of the lifecycle.</p>
+          <div class="links">
+            <a href="https://muizdebo.github.io/project-chronicle/" target="_blank" rel="noopener">↗ Live landing page</a>
+            <a href="https://linkedin.com/in/muizadebowale" target="_blank" rel="noopener">↗ Build-in-public posts</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 03 / BIO ── -->
+  <section id="bio">
+    <div class="section-head">
+      <div class="section-num">// 03</div>
+      <div class="section-title">
+        <h2>The short version.</h2>
+        <div class="subtitle">Six years, several disguises, one direction.</div>
+      </div>
+    </div>
+    <div class="bio-wrap">
+      <p>For six years I wore a lot of hats across B2B and B2C startups — social media manager, graphics designer, community manager, virtual assistant, business development analyst. The roles changed; the pattern didn't. I kept ending up <em>downstream of decisions someone else had already framed wrong</em> — fixing the surface of a problem that started with positioning.</p>
+      <p>Product Marketing was the first role where business, technology, and user experience stopped being three different jobs and became one. Positioning a product is product work. Onboarding is marketing work. Retention is both. I stopped trying to choose.</p>
+      <p>The proof is in the work above: warehouse SaaS for FMCG (Zulaiy / Zbacus), trial-to-paid automation for an agency-tech business (NLA), a two-sided local-events marketplace built and launched solo (WhatsNext), and a consumer product currently in R&amp;D with a live waitlist (Project Chronicle).</p>
+      <p>What I do now: <em>turn AI products into things people actually use, repeatedly, and tell their friends about.</em></p>
+    </div>
+  </section>
+
+  <!-- ── 04 / REVIEWS ── -->
+  <section id="reviews">
+    <div class="section-head">
+      <div class="section-num">// 04</div>
+      <div class="section-title">
+        <h2>Reviews.</h2>
+        <div class="subtitle">From people who shipped with me. Two slots reserved for direct quotes — one slot for the way I'd describe my own work, on the record.</div>
+      </div>
+    </div>
+    <div class="testimonials-wrap">
+      <div class="testimonials">
+
+        <div class="testimonial">
+          <span class="quote-mark">“</span>
+          <p class="quote">Abdulmuiz showed up and rewired how we thought about the funnel. He didn't just plug holes — he questioned why the holes were there in the first place. We shipped faster and stopped guessing.</p>
+          <div class="attr">
+            <div class="name">[ NLA — pending sign-off ]</div>
+            <div class="role">[ Founder / Operator ]</div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="quote-mark">“</span>
+          <p class="quote">The thing about working with Muiz is the follow-through. He doesn't hand you a strategy doc and disappear. He stays in the build with you until the metric actually moves.</p>
+          <div class="attr">
+            <div class="name">[ WhatsNext — pending sign-off ]</div>
+            <div class="role">[ Founder / Stakeholder ]</div>
+          </div>
+        </div>
+
+        <div class="testimonial self">
+          <span class="quote-mark">“</span>
+          <p class="quote">My job isn't to be the loudest voice in the room about the product. It's to be the most accurate. I'd rather kill a campaign in week one because the data said no than ship it on vibes and explain it on a deck three months later.</p>
+          <div class="attr">
+            <div class="name">Abdulmuiz Adebowale <span class="self-tag">— on the record</span></div>
+            <div class="role">PMM · This document</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 / STACK ── -->
+  <section id="stack">
+    <div class="section-head">
+      <div class="section-num">// 05</div>
+      <div class="section-title">
+        <h2>Stack.</h2>
+        <div class="subtitle">The tools I reach for without thinking.</div>
+      </div>
+    </div>
+    <div class="skills-wrap">
+      <div class="skills-grid">
+
+        <div class="skill-row">
+          <div class="cat">Analytics</div>
+          <div class="items">
+            <span>GA4</span><span>Looker Studio</span><span>Power BI</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="cat">CRM &amp; Lifecycle</div>
+          <div class="items">
+            <span>HubSpot</span><span>GoHighLevel</span><span>Mailchimp</span><span>SendGrid</span><span>Brevo</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="cat">Automation</div>
+          <div class="items">
+            <span>Make.com</span><span>Webhooks</span><span>Zapier</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="cat">AI / LLM Workflow</div>
+          <div class="items">
+            <span>Claude</span><span>Gemini</span><span>Perplexity</span><span>Whispr Flow</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="cat">Build / Prototype</div>
+          <div class="items">
+            <span>Lovable</span><span>Bolt</span><span>Canva</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="cat">Code</div>
+          <div class="items">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 06 / CONTACT ── -->
+  <section id="contact" class="cta">
+    <div class="label">// 06 — End of funnel</div>
+    <h2>Now it's <span class="accent">your move.</span></h2>
+    <div class="contact-grid">
+      <div class="contact-cell">
+        <div class="label">Email</div>
+        <a href="mailto:muiz.debo@gmail.com">muiz.debo@gmail.com</a>
+      </div>
+      <div class="contact-cell">
+        <div class="label">LinkedIn</div>
+        <a href="https://linkedin.com/in/muizadebowale" target="_blank" rel="noopener">linkedin.com/in/muizadebowale</a>
+      </div>
+      <div class="contact-cell">
+        <div class="label">Location</div>
+        <a>Ibadan, Nigeria — remote-ready</a>
+      </div>
+      <div class="contact-cell">
+        <div class="label">Status</div>
+        <a>Available for new role</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© ABDULMUIZ ADEBOWALE — 2026</div>
+    <div>BUILT AS A FUNNEL</div>
+  </footer>
+
+</div>
+
+<script>
+  // Stagger reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('reveal');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section, .stage, .case-study, .testimonial, .skill-row, .inflight').forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>
