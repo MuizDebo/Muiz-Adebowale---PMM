@@ -1,0 +1,29 @@
+{
+  "active_profiles": ["dave-mears", "muiz-adebowale"],
+  "primary_profile": "dave-mears",
+  "timezone": "America/Los_Angeles",
+  "report_dir": "reports",
+  "seen_file": "data/seen_jobs.json",
+  "max_age_days": 45,
+  "prune_after_days": 60,
+  "title_include": [
+    "product manager", "product owner", "head of product", "product lead",
+    "director of product", "director, product", "vp product", "vp of product",
+    "group product manager", "principal product manager", "ai product manager",
+    "technical product manager", "growth product manager", "platform product manager",
+    "chief product officer", "product management"
+  ],
+  "title_exclude": [
+    "project manager", "product marketing", "product designer", "product engineer",
+    "product analyst", "product support", "product specialist", "program manager"
+  ],
+  "eligibility_accept": [
+    "anywhere", "worldwide", "global", "work from anywhere", "fully distributed",
+    "americas", "emea", "latam", "europe", "apac", "asia", "africa",
+    "utc-", "utc+", "timezone", "time zone"
+  ],
+  "eligibility_reject_patterns": [
+    "us only", "usa only", "united states only", "us-based", "u.s. based",
+    "uk only", "canada only", "must be located in", "residents only", "eligible to work in the us"
+  ]
+}
