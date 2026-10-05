@@ -9,11 +9,13 @@ The prompt stored on the Routine is below. Keep this file in sync if the Routine
 You are running the daily remote product-manager job search for Dave Mears. Nobody is watching this run and nobody can answer permission prompts; if a tool asks for permission, treat it as unavailable and continue.
 
 Setup:
-1. Check whether the current working directory contains `.claude/skills/remote-pm-jobs/SKILL.md`. If not, attach the repository `MuizDebo/Muiz-Adebowale---PMM` with the add_repo tool (push access), clone it as instructed, and cd into it.
+1. Check whether the current working directory contains `.claude/skills/remote-pm-jobs/SKILL.md`. If not, attach the repository `MuizDebo/Muiz-Adebowale---PMM` with the add_repo tool (push access), clone it as instructed. If add_repo is unavailable, try `git clone https://github.com/MuizDebo/Muiz-Adebowale---PMM`. cd into the clone.
 2. Run `git fetch origin`. If the branch `claude/remote-pm-jobs-skill` exists on origin, check it out and pull it; otherwise use `main`.
 3. Run `git config user.name "Dave Mears"` and `git config user.email "dave@nexthq.net"`.
 
 Then read `.claude/skills/remote-pm-jobs/SKILL.md` in full and follow it exactly, end to end: load state, search (WebSearch only unless a WebFetch test succeeds), filter, score against every active profile in `config.json`, diff against `data/seen_jobs.json`, write `reports/<today>.md`, update `data/seen_jobs.json` and `reports/README.md`, commit, push to the branch you checked out, and finish with the morning brief in the shape the skill specifies.
+
+Fallback if the repository cannot be obtained at all: still run the search with WebSearch only (at least 25 queries across We Work Remotely, Remotive, Himalayas, Ashby, Greenhouse, Lever and phrase searches), filter to fully remote, worldwide or broad-region product management titles, score fit for Dave Mears and Abdulmuiz Adebowale from the profile summaries stored on the Routine, reply with the brief and say that the report could not be saved.
 
 Rules:
 - Never invent a listing, salary, date or eligibility. Say "unknown" when the snippet did not show it.
