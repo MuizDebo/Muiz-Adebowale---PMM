@@ -66,7 +66,7 @@
   "title": "Product Manager, Game",
   "company": "Colonist",
   "first_seen": "2026-10-05",
-  "last_seen": "2026-10-05",
+  "last_seen": "2026-10-31",
   "best_fit": 4
  },
  "https://remotive.com/remote/jobs/product/group-product-manager-integrations-4498990": {
@@ -220,7 +220,7 @@
   "title": "Senior Product Manager, Toggl Focus",
   "company": "Toggl",
   "first_seen": "2026-10-05",
-  "last_seen": "2026-10-05",
+  "last_seen": "2026-10-31",
   "best_fit": 4
  },
  "https://standardresume.co/remote-job/product-manager-growth-emea-hotjar-838925": {
@@ -241,7 +241,7 @@
   "title": "Product Manager, DevTools and AI Reliability",
   "company": "Checkly",
   "first_seen": "2026-10-05",
-  "last_seen": "2026-10-05",
+  "last_seen": "2026-10-31",
   "best_fit": 3
  },
  "https://www.workingnomads.com/jobs/product-manager-ai-canonical-1555742": {
@@ -361,6 +361,314 @@
   "company": "Sendwave",
   "first_seen": "2026-10-05",
   "last_seen": "2026-10-05",
+  "best_fit": 2
+ },
+ "https://auditdata.recruitee.com/o/product-manager-emea": {
+  "title": "Product Manager (mid-level, remote EMEA)",
+  "company": "Unconfirmed (Auditdata or MoneyHash per snippet)",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotive.com/remote/jobs/product/senior-product-manager-4889742": {
+  "title": "Senior Product Manager, Remote Build",
+  "company": "Remote.com",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-owner-case-iq": {
+  "title": "Product Owner",
+  "company": "Case IQ",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-owner-remote-or-relocate-propellerhead": {
+  "title": "Product Owner (remote or relocate)",
+  "company": "Propellerhead",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://www.realworkfromanywhere.com/jobs/head-of-product-celestia-6824": {
+  "title": "Head of Product",
+  "company": "Celestia",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://remote.com/openings/7817061003": {
+  "title": "Product Manager, Contractor Management",
+  "company": "Remote.com",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://www.builtincolorado.com/job/product-manager-interfaces/9622389": {
+  "title": "Product Manager, Interfaces (SDKs, docs, dashboard, CLI)",
+  "company": "Supabase",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://jobs.ashbyhq.com/supabase/47bcfdb8-b954-423e-8a9e-85256434575c": {
+  "title": "Product Manager, Infrastructure",
+  "company": "Supabase",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://posthog.com/careers/product-manager-observability-(ex-founder-or-ex-product-engineer)": {
+  "title": "Product Manager, Observability (ex-founder or ex-product engineer)",
+  "company": "PostHog",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://job-boards.greenhouse.io/gitlab/jobs/8095013002": {
+  "title": "Senior Product Manager, Security Platform Management",
+  "company": "GitLab",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://job-boards.greenhouse.io/gitlab/jobs/8022470002": {
+  "title": "Senior Product Manager, Duo Agent Platform",
+  "company": "GitLab",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://job-boards.greenhouse.io/automatticcareers/jobs/7796540": {
+  "title": "Product Manager, Growth and Analytics (Beeper)",
+  "company": "Automattic",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotejobs.org/remote-jobs/product-manager-ubuntu-canonical-ltd": {
+  "title": "Product Manager, Ubuntu",
+  "company": "Canonical",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotefirstjobs.com/jobs/product-manager-networking-at-canonical-442317": {
+  "title": "Product Manager, Networking",
+  "company": "Canonical",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://remotejobs.org/remote-jobs/technical-product-manager-canonical-ltd": {
+  "title": "Technical Product Manager, Cloud",
+  "company": "Canonical",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://www.whynotremote.com/jobs/senior-product-manager-funnels-workflow-5fb78e72": {
+  "title": "Senior Product Manager, Funnels and Workflow",
+  "company": "RevenueCat",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://builtin.com/job/lead-product-manager-payments-indirect-payroll/8286430": {
+  "title": "Lead Product Manager, Payments and Indirect Payroll",
+  "company": "Oyster",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://ats.rippling.com/chess/jobs/b901e018-0e97-43eb-ae7d-55f2fb61b86c": {
+  "title": "Product Manager, Learn (Chess with Dr. Wolf)",
+  "company": "Chess.com",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotejobs.org/remote-jobs/senior-product-manager-lightyear": {
+  "title": "Senior Product Manager",
+  "company": "Lightyear",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://remotejobs.org/remote-jobs/product-manager-edesk": {
+  "title": "Product Manager",
+  "company": "eDesk",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotefirstjobs.com/companies/scholarshipowl/jobs/growth-product-manager-745795": {
+  "title": "Growth Product Manager",
+  "company": "ScholarshipOwl",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotefirstjobs.com/jobs/head-of-product-at-openproject-499936": {
+  "title": "Head of Product",
+  "company": "OpenProject",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://joinrise.co/jobgether/head-of-product-anywhere-9g5r": {
+  "title": "Head of Product (Muslima)",
+  "company": "Muslima via Jobgether",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://arc.dev/remote-jobs/details/head-of-product-product-lead-brokerbot-ft-worldwide-ocb2jgfhiw": {
+  "title": "Head of Product / Product Lead",
+  "company": "BrokerBot",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://jobgether.com/offer/6a32cba663c956434a7bd642-director-of-product": {
+  "title": "Director of Product",
+  "company": "Help Scout",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://nodesk.co/remote-jobs/product-hunt-head-of-product": {
+  "title": "Head of Product",
+  "company": "Product Hunt",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-owner-frontend-all-1nce": {
+  "title": "Senior Product Owner, Frontend",
+  "company": "1NCE",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/director-of-product-lobster": {
+  "title": "Director of Product",
+  "company": "Lobster",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://remotejobs.org/remote-jobs/senior-product-manager-supply-chain-data-products-lobster": {
+  "title": "Senior Product Manager, Supply Chain Data Products",
+  "company": "Lobster",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://remotive.com/remote/jobs/product/product-manager-partnership-integrations-team-4201839": {
+  "title": "Product Manager, Partnership Integrations Team",
+  "company": "Constructor",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remoteleaf.com/company/constructor/product-manager-experiments-team-remote-anywhere": {
+  "title": "Product Manager, Experiments Team",
+  "company": "Constructor",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-manager-b2b-saas-workwize": {
+  "title": "Product Manager (B2B SaaS)",
+  "company": "Workwize",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://www.jobera.com/job/workwize-product-manager-finance-support-automation-48438371/": {
+  "title": "Product Manager, Finance and Support Automation",
+  "company": "Workwize",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotive.com/remote/jobs/product/growth-product-manager-4947587": {
+  "title": "Growth Product Manager, Website and Experimentation",
+  "company": "Superside",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://holepunch.recruitee.com/o/product-manager-100-remote-worldwide": {
+  "title": "Product Manager (100% Remote, Worldwide)",
+  "company": "Holepunch",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-manager-for-bonsai-innovation-hub-jetbrains": {
+  "title": "Product Manager, Bonsai (Innovation Hub)",
+  "company": "JetBrains",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/product-manager-b2c-subscription-utilities-nexpanse": {
+  "title": "Product Manager, B2C Subscription Utilities",
+  "company": "Nexpanse",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://www.neura.market/jobs/product-manager-at-welocalize-k7p3hwtc": {
+  "title": "Product Manager (senior)",
+  "company": "Welocalize",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://weworkremotely.com/jobs/922": {
+  "title": "Product Manager",
+  "company": "Float",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://remotejobs.org/remote-jobs/lead-product-manager-plg-agiloft": {
+  "title": "Lead Product Manager, PLG (also Senior PM, PLG)",
+  "company": "Agiloft",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://realworkfromanywhere.com/jobs/product-manager-customer-onboarding-remote-1149": {
+  "title": "Product Manager, Customer Onboarding",
+  "company": "Remote.com",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 3
+ },
+ "https://realworkfromanywhere.com/jobs/head-of-product-management-arena-im-2164": {
+  "title": "Head of Product Management",
+  "company": "Arena.im",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 2
+ },
+ "https://jobs-radar.com/job/af691a8e-a53f-48c2-9bec-f9d62b0f03f1": {
+  "title": "Product Manager",
+  "company": "saas.group (Usersnap)",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
+  "best_fit": 4
+ },
+ "https://remotefirstjobs.com/jobs/product-manager-at-idera-software-523515": {
+  "title": "Product Manager (DesignWise)",
+  "company": "IDERA Software",
+  "first_seen": "2026-10-31",
+  "last_seen": "2026-10-31",
   "best_fit": 2
  }
 }

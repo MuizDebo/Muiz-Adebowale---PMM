@@ -30,6 +30,8 @@ ls reports/
 ```
 Note today's date in the timezone from `config.json`.
 
+**Recover state from artifacts when the repo is stale.** Scheduled runs often cannot push (the routine's session has no repository sources, so the git proxy answers 403). Each such run publishes its report as an artifact titled `Remote PM jobs YYYY-MM-DD`. Call `list_artifacts` (claude-artifacts server) and look for the newest title of that form. If its date is newer than the last entry in `reports/README.md`, read it with `read_artifact` and take the JSON inside `<script id="seen-jobs" type="application/json">` as the seen-jobs state instead of `data/seen_jobs.json`. If no such artifact exists, use the file.
+
 ### Step 1: search
 Run every query in `queries.md` with `WebSearch`. If the `Agent` tool is available, split the query bank across 2 to 3 subagents (boards, ATS hosts, company careers) and tell each one: **WebSearch only, WebFetch is blocked, return a JSON array, only URLs you actually saw, mark unknowns as unknown, never invent.** Add 3 to 5 ad-hoc queries of your own for the day (for example a trending company name, "Who is hiring" thread for the current month).
 
@@ -70,7 +72,11 @@ git add reports data
 git commit -m "Remote PM jobs report YYYY-MM-DD"
 git push -u origin <current branch>
 ```
-If the push is refused, say so in the reply and keep the report content in the reply.
+**If the push is refused (403 or "not authorized"), publish the report as an artifact so it survives the container.** Run:
+```
+python3 .claude/skills/remote-pm-jobs/scripts/md_to_html.py reports/YYYY-MM-DD.md data/seen_jobs.json /tmp/remote-pm-jobs-YYYY-MM-DD.html
+```
+then publish `/tmp/remote-pm-jobs-YYYY-MM-DD.html` with `publish_files` (title `Remote PM jobs YYYY-MM-DD`, icon `briefcase`), or `publish_version` with the file's content if `publish_files` is unavailable. Put the artifact URL in the reply. Do not treat a refused push as a reason to drop the report. Also publish the artifact even when the push succeeds if `config.json` has `"always_publish_artifact": true`.
 
 ### Step 7: reply (the morning brief)
 Reply in this shape, under 300 words:
@@ -79,6 +85,13 @@ Reply in this shape, under 300 words:
 - Anything that needs a human decision (for example a role that closes soon).
 - Path to the full report.
 Never claim a role was verified unless its page was actually opened.
+
+## Compiling all days into one document
+`/remote-pm-jobs compile` gathers every day's roles into one `.docx` and one `.md`:
+1. Collect `reports/*.md` from the repo and every `Remote PM jobs YYYY-MM-DD` artifact (via `list_artifacts` and `read_artifact`).
+2. Normalise each role to the JSON shape used by `scripts/build_compiled.js` (`date, title, company, url, elig, salary, posted, seniority, domain, apply, D, M, why, angle, evidence, source`), one JSON file per day.
+3. Run `node .claude/skills/remote-pm-jobs/scripts/build_compiled.js <out_dir> <day1.json> <day2.json> ...`. It dedupes by URL, keeps first-seen and seen-again dates, ranks by fit, and writes the `.docx` and `.md`.
+4. Commit the outputs under `reports/compiled/` and send the `.docx` to the user.
 
 ## Manual use
 `/remote-pm-jobs` runs the full procedure. `/remote-pm-jobs quick` runs the first 10 queries only and skips the commit.
